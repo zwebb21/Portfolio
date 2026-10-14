@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Steamboat Bill's React project focused on reusable components, project architecture, Vercel hosting, and restaurant ordering."
+  >
+
+  <title>Steamboat Bill's Project Overview | Zarius</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --project-red: #bc342c;
+      --project-red-dark: #982820;
+      --project-cream: #f7f3ea;
+      --project-ink: #1b272c;
+      --project-border: #e4dace;
+    }
+
+    body {
+      background: var(--project-cream);
+      color: var(--project-ink);
+      line-height: 1.7;
+    }
+
+    .navbar {
+      border-bottom: 1px solid var(--project-border);
+    }
+
+    .navbar-brand {
+      font-size: 1rem;
+      white-space: normal;
+    }
+
+    .project-hero {
+      background: linear-gradient(135deg, #fffaf3, #f3e3d1);
+      border-bottom: 1px solid var(--project-border);
+    }
+
+    .project-kicker {
+      color: var(--project-red);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+    }
+
+    .stack-tile {
+      background: #ffffff;
+      border: 1px solid var(--project-border);
+      border-radius: 8px;
+      min-height: 96px;
+    }
+
+    .preview-frame {
+      background: #ffffff;
+      border: 1px solid var(--project-border);
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(27, 39, 44, 0.08);
+      overflow: hidden;
+    }
+
+    .preview-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .preview-frame figcaption {
+      padding: 1.25rem;
+    }
+
+    .btn-project {
+      background: var(--project-red);
+      border-color: var(--project-red);
+      color: #ffffff;
+    }
+
+    .btn-project:hover {
+      background: var(--project-red-dark);
+      border-color: var(--project-red-dark);
+      color: #ffffff;
+    }
+
+    .learning-note {
+      background: #ffffff;
+      border-left: 4px solid var(--project-red);
+      padding: 1.25rem;
+    }
+
+    .text-secondary {
+      color: #596269 !important;
+    }
+
+    code {
+      color: #a52b25;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--project-ink);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav
+    class="navbar navbar-expand-lg bg-white sticky-top"
+    aria-label="Portfolio navigation"
+  >
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        Zarius - Web Developer Portfolio
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#project-row">
+              Projects
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#Contact-Form">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="project-hero py-5">
+    <div class="container py-lg-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <p class="project-kicker mb-2">React Learning Project</p>
+
+          <h1 class="display-4 fw-semibold mb-3">
+            Steamboat Bill's
+          </h1>
+
+          <p class="lead mb-0">
+            A restaurant app built to practice React, organize a site
+            with reusable components, and learn how to deploy a live
+            project on Vercel.
+          </p>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="bg-white border rounded-2 p-4 shadow-sm">
+            <h2 class="h5 mb-3">Project Links</h2>
+
+            <div class="d-grid gap-2">
+              <a
+                class="btn btn-project"
+                href="https://steamboat-bills.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live Demo
+              </a>
+
+              <a
+                class="btn btn-outline-dark"
+                href="https://github.com/zwebb21/steamboat-bills"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Repo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container py-5" aria-labelledby="purpose">
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <h2 class="h3 mb-4" id="purpose">Purpose</h2>
+
+          <p>
+            I built Steamboat Bill's as a hands-on project to strengthen
+            my understanding of React. Using a restaurant website gave
+            me a practical way to build navigation, featured food
+            sections, menu layouts, and calls to action while learning
+            how a React app fits together.
+          </p>
+
+          <p>
+            A major focus was learning proper project architecture.
+            I broke the interface into components such as
+            <code>Navbar</code>, <code>Hero</code>,
+            <code>FeaturedFood</code>, <code>MenuItem</code>,
+            <code>OrderOptions</code>, and <code>Footer</code>.
+            This helped me practice giving each component a clear
+            responsibility and combining those pieces into complete
+            pages.
+          </p>
+
+          <p>
+            I also used the project to learn Vercel hosting and
+            deployment. Publishing the app gave me experience taking
+            a React project from local development to a live site
+            that others can visit and review.
+          </p>
+
+          <p>
+            Another focus was exploring how the site could connect
+            visitors to the restaurant's existing online ordering
+            and POS workflow. I worked on the customer journey from
+            browsing the restaurant site to choosing an ordering
+            option, with the goal of making that transition
+            straightforward.
+          </p>
+
+          <div class="learning-note mt-4">
+            <h3 class="h6">What I Practiced</h3>
+
+            <p class="mb-0">
+              React component composition, reusable UI, organized
+              folders, navigation state, and Vercel deployment.
+              The project also includes learning work with Next.js
+              routing.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <h2 class="h3 mb-4">Tech Stack</h2>
+
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="stack-tile p-3">
+                <h3 class="h6 mb-1">React</h3>
+                <p class="small text-secondary mb-0">
+                  Components and UI state
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="stack-tile p-3">
+                <h3 class="h6 mb-1">JavaScript / JSX</h3>
+                <p class="small text-secondary mb-0">
+                  Interface logic and markup
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="stack-tile p-3">
+                <h3 class="h6 mb-1">CSS</h3>
+                <p class="small text-secondary mb-0">
+                  Styling and responsive layout
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="stack-tile p-3">
+                <h3 class="h6 mb-1">Next.js</h3>
+                <p class="small text-secondary mb-0">
+                  Routing practice
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="stack-tile p-3">
+                <h3 class="h6 mb-1">Vercel</h3>
+                <p class="small text-secondary mb-0">
+                  Live app hosting and deployment
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="stack-tile p-3">
+                <h3 class="h6 mb-1">Git / GitHub</h3>
+                <p class="small text-secondary mb-0">
+                  Version control and source code
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="container pb-5"
+      aria-labelledby="screenshots"
+    >
+      <div
+        class="d-flex flex-column flex-md-row align-items-md-end
+               justify-content-between gap-3 mb-4"
+      >
+        <div>
+          <h2 class="h3 mb-2" id="screenshots">
+            Project Screenshots
+          </h2>
+
+          <p class="text-secondary mb-0">
+            The restaurant interface, component structure,
+            and ordering experience.
+          </p>
+        </div>
+
+        <div class="d-flex gap-2">
+          <a
+            class="btn btn-project"
+            href="https://steamboat-bills.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Live Demo
+          </a>
+
+          <a
+            class="btn btn-outline-dark"
+            href="https://github.com/zwebb21/steamboat-bills"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Code
+          </a>
+        </div>
+      </div>
+
+      <figure class="preview-frame mb-4">
+        <img
+          src="images/steamboat-homepage.png"
+          alt="Steamboat Bill's restaurant app homepage"
+          loading="lazy"
+        >
+
+        <figcaption>
+          <h3 class="h5">Restaurant Homepage</h3>
+
+          <p class="text-secondary mb-0">
+            A restaurant-focused interface bringing together
+            navigation, featured food, and ordering calls to action
+            through React components.
+          </p>
+        </figcaption>
+      </figure>
+
+      <figure class="preview-frame mb-4">
+        <img
+          src="images/steamboat-components.png"
+          alt="React component code and project folder structure"
+          loading="lazy"
+        >
+
+        <figcaption>
+          <h3 class="h5">React Components and Architecture</h3>
+
+          <p class="text-secondary mb-0">
+            Organizing the interface into focused components helped
+            me understand how to structure a React project and keep
+            its code easier to maintain.
+          </p>
+        </figcaption>
+      </figure>
+
+      <figure class="preview-frame mb-0">
+        <img
+          src="images/steamboat-ordering.png"
+          alt="Restaurant's existing ordering platform with pickup,
+               delivery, and menu options"
+          loading="lazy"
+        >
+
+        <figcaption>
+          <h3 class="h5">
+            Online Ordering / POS Connection Goal
+          </h3>
+
+          <p class="text-secondary mb-0">
+            The restaurant's existing ordering interface served as
+            a reference for the ordering journey. My focus was
+            learning how the React site could direct customers into
+            that workflow. This screenshot shows the external
+            ordering platform.
+          </p>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="container pb-4">
+    <p class="small text-secondary mb-0">
+      Steamboat Bill's — React learning project by Zarius Webb.
+    </p>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
