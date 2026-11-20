@@ -1,6 +1,6 @@
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/hero.jpeg");
 
     /* Set a specific height */
     height: 100%;
@@ -53,7 +53,7 @@ background-image:linear-gradient(to right, rgba(103, 50, 1, 0.767), rgba(67, 32,
 }
 
 
-#vidfeature{
+#vidfeature, #vidfeature-secondary{
 
 
 text-align: center;
@@ -62,7 +62,7 @@ background-image:linear-gradient(to top, #884506b0, rgba(143, 83, 37, 0.89));
 }
 
 
-#salestag{
+#salestag, #salestag-secondary{
 
 color: antiquewhite;
 font-size: xx-large;

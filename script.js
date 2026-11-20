@@ -1,15 +1,14 @@
 const canvas = document.getElementById('orbitCanvas');
+if (!canvas) {
+  // This script is shared with pages that do not include the orbit canvas.
+} else {
 const ctx = canvas.getContext('2d');
-
 function resizeCanvas() {
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
 }
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
-
-const centerX = canvas.width / 2;
-const centerY = canvas.height / 2;
 
 // 5 glowing rings settings
 const orbits = [
@@ -21,6 +20,8 @@ const orbits = [
 ];
 
 function animate() {
+  const centerX = canvas.width / 2;
+  const centerY = canvas.height / 2;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   orbits.forEach(orbit => {
@@ -48,3 +49,4 @@ function animate() {
 }
 
 animate();
+}

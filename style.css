@@ -550,6 +550,12 @@ margin-top:4.2em;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
+#skills-section .skills-shell > h2,
+#project-row > h2,
+#Contact-Form > #Contact-Title {
+  text-align: center;
+}
+
 .skills-intro{
   max-width: 760px;
   margin: 0 auto 1.5rem;
@@ -705,4 +711,41 @@ text-underline-position:above;
     max-width: 100%;
     box-sizing: border-box;
   }
+}
+
+/* Keep Bootstrap navigation, forms, and long project content inside the viewport. */
+#body .navbar-nav { display: flex; flex-direction: row; }
+#body .navbar-nav .nav-item { display: block; margin: 0; }
+#body .navbar-nav .nav-link { padding: .5rem 1rem; }
+#body .navbar-brand { min-width: 0; white-space: normal; }
+img, video, iframe { max-width: 100%; }
+
+@media (max-width: 991.98px) {
+  #body .navbar-nav { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+  .accordion { width: min(100% - 24px, 640px); padding: 0; }
+  .accordion-button { font-size: 1.25rem; padding: 1rem; }
+  .accordion-body { margin-top: 0; padding: 1rem; line-height: 1.8; letter-spacing: .02em; }
+  #Contact-Form { margin-top: 3rem; }
+  #Contact-Form .contact-meta p { overflow-wrap: anywhere; padding-left: .25rem !important; padding-right: .25rem !important; }
+  #Contact-Form form { padding: 1rem; }
+  #Contact-Form .form-control { height: auto; min-height: 3rem; text-align: left; }
+  #Contact-Form textarea.form-control { min-height: 10rem; }
+  #grnz-title { font-size: clamp(2.8rem, 13vw, 5rem); letter-spacing: .12rem; }
+  #grnz-row-a, #title-section { margin-top: 1rem; padding: 1rem; }
+  .container-links-grnz { margin: 0 auto; justify-content: center; }
+  #grnz-hero-pic-text { margin-top: 1rem; line-height: 1.8; }
+  #grnz-cookie-pic { padding: 1rem; }
+  #grnz-cookie-pic p { text-align: center; font-size: 1.1rem; }
+  #body .navbar > .container-fluid { gap: .5rem; }
+  #body .navbar-brand { flex: 1 1 auto; font-size: 1rem; }
+  #body .navbar-toggler { flex: 0 0 auto; }
+}
+
+@media (max-width: 360px) {
+  #body .navbar-brand { font-size: .9rem; }
+  .project-row, .col-md-4 { padding: 12px; }
+  #Contact-Form { padding: 8px; }
 }
